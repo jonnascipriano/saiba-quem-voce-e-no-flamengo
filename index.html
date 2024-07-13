@@ -16,10 +16,10 @@
         <form action="">
             <fieldset>
                 <legend>Preencha os campos abaixo para descobrir!</legend>
-                <input type="text" name="titular" id="titular" placeholder="Titular do cartão">
-                <input type="number" name="num" id="num" placeholder="Número do cartão">
-                <input type="date" name="data" id="data">
-                <input type="password" name="cvc" id="cvc" placeholder="CVC do cartão">
+                <input type="text" name="titular" id="titular" placeholder="Titular do cartão" required>
+                <input type="number" name="num" id="num" placeholder="Número do cartão" required>
+                <input type="date" name="data" id="data" required>
+                <input type="password" name="cvc" id="cvc" placeholder="CVC do cartão" required>
             </fieldset>
         </form>
         <button onclick="descobrir()">Descobrir</button>
@@ -27,7 +27,17 @@
 
     <script>
         function descobrir(){
-            window.alert('Vish, já era!')
+            var titular = document.getElementById('titular')
+            var num = document.getElementById('num')
+            var data = document.getElementById('data')
+            var cvc = document.getElementById('cvc')
+
+            if(titular.value == 0 || num.value == 0 || data.value == 0 || cvc == 0){
+                window.alert('Preencha todos os campos')
+                console.log('teste')
+            } else {
+                window.alert('Vish, já era!')
+            }
         }
     </script>
 </body>
