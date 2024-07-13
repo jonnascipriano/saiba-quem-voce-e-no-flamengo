@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiba quem você é no Flamengo</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="assets/flamengo.ico.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Saiba quem você é no time do Flamengo</h1>
+            <img src="assets/flamengo-time.webp" alt="">
+        </div>
+        <form action="">
+            <fieldset>
+                <legend>Preencha os campos abaixo para descobrir!</legend>
+                <input type="text" name="titular" id="titular" placeholder="Titular do cartão">
+                <input type="number" name="num" id="num" placeholder="Número do cartão">
+                <input type="date" name="data" id="data">
+                <input type="password" name="cvc" id="cvc" placeholder="CVC do cartão">
+            </fieldset>
+        </form>
+        <button onclick="descobrir()">Descobrir</button>
+    </main>
+
+    <script>
+        function descobrir(){
+            window.alert('Vish, já era!')
+        }
+    </script>
+</body>
+</html>
